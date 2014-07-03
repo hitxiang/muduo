@@ -33,7 +33,7 @@ EventLoopThread::~EventLoopThread()
   {
     // still a tiny chance to call destructed object, if threadFunc exits just now.
     // but when EventLoopThread destructs, usually programming is exiting anyway.
-    loop_->quit();
+    loop_->quit(); // Quit the loop of IO thread, so quit the IO thread.
     thread_.join();
   }
 }
@@ -41,7 +41,7 @@ EventLoopThread::~EventLoopThread()
 EventLoop* EventLoopThread::startLoop()
 {
   assert(!thread_.started());
-  thread_.start();
+  thread_.start(); // call EventLoopThread::threadFunc() to start IO thread.
 
   {
     MutexLockGuard lock(mutex_);
@@ -66,9 +66,13 @@ void EventLoopThread::threadFunc()
   {
     MutexLockGuard lock(mutex_);
     loop_ = &loop;
-    cond_.notify();
+    cond_.notify(); // Enable EventLoopThread::startLoop to return EventLoop pointer.
   }
 
+  // Normally, the flow is as following
+  // 1, EventLoopThread object is destructed 
+  // 2, loop_->quit() is called, loop.loop() stops, exits EventLoopThread::threadFunc
+  // 3, The stack object loop is destructed. loop_ become invalid.
   loop.loop();
   //assert(exiting_);
   loop_ = NULL;

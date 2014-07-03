@@ -84,6 +84,7 @@ void Acceptor::handleRead()
       idleFd_ = ::accept(acceptSocket_.fd(), NULL, NULL);
       ::close(idleFd_);
       idleFd_ = ::open("/dev/null", O_RDONLY | O_CLOEXEC);
+      LOG_ERROR << "Not enugh file descriptors,raise the ulimit!";
     }
   }
 }

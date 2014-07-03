@@ -18,12 +18,12 @@ class ThreadLocal : boost::noncopyable
  public:
   ThreadLocal()
   {
-    pthread_key_create(&pkey_, &ThreadLocal::destructor);
+    pthread_key_create(&pkey_, &ThreadLocal::destructor); // register destructor to destroy data related with pkey_
   }
 
   ~ThreadLocal()
   {
-    pthread_key_delete(pkey_);
+    pthread_key_delete(pkey_); // only delete the key, not the data
   }
 
   T& value()

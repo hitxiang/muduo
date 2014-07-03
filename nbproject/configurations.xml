@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="examples">
+        <df name="ace">
+          <df name="logging">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="ttcp">
+            <in>common.cc</in>
+            <in>main.cc</in>
+            <in>ttcp.cc</in>
+            <in>ttcp_blocking.cc</in>
+          </df>
+        </df>
+        <df name="asio">
+          <df name="chat">
+            <in>client.cc</in>
+            <in>loadtest.cc</in>
+            <in>server.cc</in>
+            <in>server_threaded.cc</in>
+            <in>server_threaded_efficient.cc</in>
+            <in>server_threaded_highperformance.cc</in>
+          </df>
+          <df name="tutorial">
+            <df name="timer2">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer3">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer4">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer5">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer6">
+              <in>timer.cc</in>
+            </df>
+          </df>
+        </df>
+        <df name="cdns">
+          <in>Resolver.cc</in>
+          <in>dns.cc</in>
+        </df>
+        <df name="curl">
+          <in>Curl.cc</in>
+          <in>download.cc</in>
+          <in>mcurl.cc</in>
+        </df>
+        <df name="fastcgi">
+          <in>fastcgi.cc</in>
+          <in>fastcgi_test.cc</in>
+        </df>
+        <df name="filetransfer">
+          <in>download.cc</in>
+          <in>download2.cc</in>
+          <in>download3.cc</in>
+        </df>
+        <df name="hub">
+          <in>codec.cc</in>
+          <in>hub.cc</in>
+          <in>pub.cc</in>
+          <in>pubsub.cc</in>
+          <in>sub.cc</in>
+        </df>
+        <df name="idleconnection">
+          <in>echo.cc</in>
+          <in>main.cc</in>
+          <in>sortedlist.cc</in>
+        </df>
+        <df name="maxconnection">
+          <in>echo.cc</in>
+          <in>main.cc</in>
+        </df>
+        <df name="memcached">
+          <df name="client">
+            <in>bench.cc</in>
+          </df>
+          <df name="server">
+            <in>Item.cc</in>
+            <in>MemcacheServer.cc</in>
+            <in>Session.cc</in>
+            <in>footprint_test.cc</in>
+            <in>server.cc</in>
+          </df>
+        </df>
+        <df name="multiplexer">
+          <in>demux.cc</in>
+          <in>multiplexer.cc</in>
+          <in>multiplexer_simple.cc</in>
+        </df>
+        <df name="netty">
+          <df name="discard">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="echo">
+            <in>client.cc</in>
+            <in>server.cc</in>
+            <in>server2.cc</in>
+          </df>
+          <df name="uptime">
+            <in>uptime.cc</in>
+          </df>
+        </df>
+        <df name="pingpong">
+          <in>bench.cc</in>
+          <in>client.cc</in>
+          <in>server.cc</in>
+        </df>
+        <df name="protobuf">
+          <df name="codec">
+            <in>client.cc</in>
+            <in>codec.cc</in>
+            <in>codec_test.cc</in>
+            <in>dispatcher_lite_test.cc</in>
+            <in>dispatcher_test.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="resolver">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="rpc">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="rpcbalancer">
+            <in>balancer.cc</in>
+            <in>balancer_raw.cc</in>
+          </df>
+          <df name="rpcbench">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+        </df>
+        <df name="roundtrip">
+          <in>roundtrip.cc</in>
+          <in>roundtrip_udp.cc</in>
+        </df>
+        <df name="shorturl">
+          <in>shorturl.cc</in>
+        </df>
+        <df name="simple">
+          <df name="allinone">
+            <in>allinone.cc</in>
+          </df>
+          <df name="chargen">
+            <in>chargen.cc</in>
+            <in>main.cc</in>
+          </df>
+          <df name="chargenclient">
+            <in>chargenclient.cc</in>
+          </df>
+          <df name="daytime">
+            <in>daytime.cc</in>
+            <in>main.cc</in>
+          </df>
+          <df name="discard">
+            <in>discard.cc</in>
+            <in>main.cc</in>
+          </df>
+          <df name="echo">
+            <in>echo.cc</in>
+            <in>main.cc</in>
+          </df>
+          <df name="time">
+            <in>main.cc</in>
+            <in>time.cc</in>
+          </df>
+          <df name="timeclient">
+            <in>timeclient.cc</in>
+          </df>
+        </df>
+        <df name="socks4a">
+          <in>balancer.cc</in>
+          <in>socks4a.cc</in>
+          <in>tcprelay.cc</in>
+        </df>
+        <df name="sudoku">
+          <in>client.cc</in>
+          <in>server_basic.cc</in>
+          <in>server_multiloop.cc</in>
+          <in>server_threadpool.cc</in>
+          <in>sudoku.cc</in>
+        </df>
+        <df name="twisted">
+          <df name="finger">
+            <in>finger01.cc</in>
+            <in>finger02.cc</in>
+            <in>finger03.cc</in>
+            <in>finger04.cc</in>
+            <in>finger05.cc</in>
+            <in>finger06.cc</in>
+            <in>finger07.cc</in>
+          </df>
+        </df>
+        <df name="wordcount">
+          <in>hasher.cc</in>
+          <in>receiver.cc</in>
+        </df>
+        <df name="zeromq">
+          <in>local_lat.cc</in>
+          <in>remote_lat.cc</in>
+        </df>
+      </df>
+      <df name="muduo">
+        <df name="base">
+          <df name="tests">
+            <in>AsyncLogging_test.cc</in>
+            <in>Atomic_unittest.cc</in>
+            <in>BlockingQueue_bench.cc</in>
+            <in>BlockingQueue_test.cc</in>
+            <in>BoundedBlockingQueue_test.cc</in>
+            <in>Date_unittest.cc</in>
+            <in>Exception_test.cc</in>
+            <in>FileUtil_test.cc</in>
+            <in>Fork_test.cc</in>
+            <in>GzipFile_test.cc</in>
+            <in>LogFile_test.cc</in>
+            <in>LogStream_bench.cc</in>
+            <in>LogStream_test.cc</in>
+            <in>Logging_test.cc</in>
+            <in>Mutex_test.cc</in>
+            <in>ProcessInfo_test.cc</in>
+            <in>SingletonThreadLocal_test.cc</in>
+            <in>Singleton_test.cc</in>
+            <in>ThreadLocalSingleton_test.cc</in>
+            <in>ThreadLocal_test.cc</in>
+            <in>ThreadPool_test.cc</in>
+            <in>Thread_bench.cc</in>
+            <in>Thread_test.cc</in>
+            <in>TimeZone_unittest.cc</in>
+            <in>Timestamp_unittest.cc</in>
+          </df>
+          <in>AsyncLogging.cc</in>
+          <in>Condition.cc</in>
+          <in>CountDownLatch.cc</in>
+          <in>Date.cc</in>
+          <in>Exception.cc</in>
+          <in>FileUtil.cc</in>
+          <in>LogFile.cc</in>
+          <in>LogStream.cc</in>
+          <in>Logging.cc</in>
+          <in>ProcessInfo.cc</in>
+          <in>Thread.cc</in>
+          <in>ThreadPool.cc</in>
+          <in>TimeZone.cc</in>
+          <in>Timestamp.cc</in>
+        </df>
+        <df name="net">
+          <df name="http">
+            <df name="tests">
+              <in>HttpRequest_unittest.cc</in>
+              <in>HttpServer_test.cc</in>
+            </df>
+            <in>HttpResponse.cc</in>
+            <in>HttpServer.cc</in>
+          </df>
+          <df name="inspect">
+            <df name="tests">
+              <in>Inspector_test.cc</in>
+            </df>
+            <in>Inspector.cc</in>
+            <in>PerformanceInspector.cc</in>
+            <in>ProcessInspector.cc</in>
+            <in>SystemInspector.cc</in>
+          </df>
+          <df name="poller">
+            <in>DefaultPoller.cc</in>
+            <in>EPollPoller.cc</in>
+            <in>PollPoller.cc</in>
+          </df>
+          <df name="protobuf">
+            <in>ProtobufCodecLite.cc</in>
+          </df>
+          <df name="protorpc">
+            <in>RpcChannel.cc</in>
+            <in>RpcCodec.cc</in>
+            <in>RpcCodec_test.cc</in>
+            <in>RpcServer.cc</in>
+          </df>
+          <df name="tests">
+            <in>Buffer_unittest.cc</in>
+            <in>EchoClient_unittest.cc</in>
+            <in>EchoServer_unittest.cc</in>
+            <in>EventLoopThreadPool_unittest.cc</in>
+            <in>EventLoopThread_unittest.cc</in>
+            <in>EventLoop_unittest.cc</in>
+            <in>InetAddress_unittest.cc</in>
+            <in>TcpClient_reg1.cc</in>
+            <in>TimerQueue_unittest.cc</in>
+            <in>ZlibStream_unittest.cc</in>
+          </df>
+          <in>Acceptor.cc</in>
+          <in>Buffer.cc</in>
+          <in>Channel.cc</in>
+          <in>Connector.cc</in>
+          <in>EventLoop.cc</in>
+          <in>EventLoopThread.cc</in>
+          <in>EventLoopThreadPool.cc</in>
+          <in>InetAddress.cc</in>
+          <in>Poller.cc</in>
+          <in>Socket.cc</in>
+          <in>SocketsOps.cc</in>
+          <in>TcpClient.cc</in>
+          <in>TcpConnection.cc</in>
+          <in>TcpServer.cc</in>
+          <in>Timer.cc</in>
+          <in>TimerQueue.cc</in>
+          <in>boilerplate.cc</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="examples/ace/logging/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/ace/logging/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/ace/ttcp/common.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/ace/ttcp/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/ace/ttcp/ttcp.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/ace/ttcp/ttcp_blocking.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/asio/chat/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/asio/chat/loadtest.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/asio/chat/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/asio/chat/server_threaded.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/chat/server_threaded_efficient.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/chat/server_threaded_highperformance.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/tutorial/timer2/timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/tutorial/timer3/timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/tutorial/timer4/timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/tutorial/timer5/timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/asio/tutorial/timer6/timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/cdns/Resolver.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/cdns/dns.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/curl/Curl.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/curl/download.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/curl/mcurl.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/fastcgi/fastcgi.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/fastcgi/fastcgi_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/filetransfer/download.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/filetransfer/download2.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/filetransfer/download3.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/hub/codec.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/hub/hub.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/hub/pub.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/hub/pubsub.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/hub/sub.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/idleconnection/echo.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/idleconnection/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/idleconnection/sortedlist.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/maxconnection/echo.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/maxconnection/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/memcached/client/bench.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/memcached/server/Item.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/memcached/server/MemcacheServer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/memcached/server/Session.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/memcached/server/footprint_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/memcached/server/server.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/multiplexer/demux.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/multiplexer/multiplexer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/multiplexer/multiplexer_simple.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/netty/discard/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/netty/discard/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/netty/echo/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/netty/echo/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/netty/echo/server2.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/netty/uptime/uptime.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/pingpong/bench.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/pingpong/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/pingpong/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/codec.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/codec_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/dispatcher_lite_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/dispatcher_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/codec/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/resolver/client.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/resolver/server.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpc/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpc/server.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpcbalancer/balancer.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpcbalancer/balancer_raw.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpcbench/client.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/protobuf/rpcbench/server.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/roundtrip/roundtrip.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/roundtrip/roundtrip_udp.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/shorturl/shorturl.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/allinone/allinone.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/simple/chargen/chargen.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/chargen/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/chargenclient/chargenclient.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/simple/daytime/daytime.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/daytime/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/discard/discard.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/discard/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/echo/echo.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/echo/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/time/main.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/time/time.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/simple/timeclient/timeclient.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/socks4a/balancer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/socks4a/socks4a.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/socks4a/tcprelay.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/sudoku/client.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/sudoku/server_basic.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/sudoku/server_multiloop.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/sudoku/server_threadpool.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/sudoku/sudoku.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger01.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger02.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger03.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger04.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger05.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger06.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/twisted/finger/finger07.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="examples/wordcount/hasher.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/wordcount/receiver.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/zeromq/local_lat.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="examples/zeromq/remote_lat.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/AsyncLogging.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Condition.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/CountDownLatch.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Date.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Exception.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/FileUtil.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/LogFile.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/LogStream.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Logging.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/ProcessInfo.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Thread.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/ThreadPool.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/TimeZone.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/Timestamp.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/AsyncLogging_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Atomic_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/BlockingQueue_bench.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/BlockingQueue_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/BoundedBlockingQueue_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Date_unittest.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Exception_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/FileUtil_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Fork_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/GzipFile_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/LogFile_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/LogStream_bench.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/LogStream_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Logging_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Mutex_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/ProcessInfo_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/SingletonThreadLocal_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Singleton_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/ThreadLocalSingleton_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/ThreadLocal_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/ThreadPool_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Thread_bench.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Thread_test.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/base/tests/TimeZone_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/base/tests/Timestamp_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/Acceptor.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Buffer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Channel.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Connector.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/EventLoop.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/EventLoopThread.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/EventLoopThreadPool.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/InetAddress.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Poller.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Socket.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/SocketsOps.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/TcpClient.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/TcpConnection.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/TcpServer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/Timer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/TimerQueue.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/boilerplate.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/http/HttpResponse.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/http/HttpServer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/http/tests/HttpRequest_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/http/tests/HttpServer_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/inspect/Inspector.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/inspect/PerformanceInspector.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/inspect/ProcessInspector.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/inspect/SystemInspector.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/inspect/tests/Inspector_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/poller/DefaultPoller.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/poller/EPollPoller.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/poller/PollPoller.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/protobuf/ProtobufCodecLite.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/protorpc/RpcChannel.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/protorpc/RpcCodec.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/protorpc/RpcCodec_test.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/protorpc/RpcServer.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/tests/Buffer_unittest.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/tests/EchoClient_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/EchoServer_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/EventLoopThreadPool_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/EventLoopThread_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/EventLoop_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/InetAddress_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/TcpClient_reg1.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/tests/TimerQueue_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="muduo/net/tests/ZlibStream_unittest.cc"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

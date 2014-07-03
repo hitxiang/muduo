@@ -101,7 +101,12 @@ class Channel : boost::noncopyable
   const int  fd_;
   int        events_;
   int        revents_;
-  int        index_; // used by Poller.
+
+  /*
+   * The number in event array when used by PollPoller.
+   * The status of a channel when used by EPollPoller.
+   */
+  int        index_;
   bool       logHup_;
 
   boost::weak_ptr<void> tie_;

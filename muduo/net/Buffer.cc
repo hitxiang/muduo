@@ -25,7 +25,7 @@ const size_t Buffer::kInitialSize;
 ssize_t Buffer::readFd(int fd, int* savedErrno)
 {
   // saved an ioctl()/FIONREAD call to tell how much to read
-  char extrabuf[65536];
+  char extrabuf[65536]; // 64KB
   struct iovec vec[2];
   const size_t writable = writableBytes();
   vec[0].iov_base = begin()+writerIndex_;
@@ -47,6 +47,9 @@ ssize_t Buffer::readFd(int fd, int* savedErrno)
   else
   {
     writerIndex_ = buffer_.size();
+    // make new space if not enough space
+    // and append data of extrabuf
+    // ensureWritableBytes => std::copy => hasWritten
     append(extrabuf, n - writable);
   }
   // if (n == writable + sizeof extrabuf)

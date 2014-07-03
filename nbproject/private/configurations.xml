@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="94">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="examples">
+        <df name="ace">
+          <df name="logging">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="ttcp">
+            <in>common.cc</in>
+            <in>common.h</in>
+            <in>main.cc</in>
+            <in>ttcp.cc</in>
+            <in>ttcp_blocking.cc</in>
+          </df>
+        </df>
+        <df name="asio">
+          <df name="chat">
+            <in>client.cc</in>
+            <in>codec.h</in>
+            <in>loadtest.cc</in>
+            <in>server.cc</in>
+            <in>server_threaded.cc</in>
+            <in>server_threaded_efficient.cc</in>
+            <in>server_threaded_highperformance.cc</in>
+          </df>
+          <df name="tutorial">
+            <df name="timer2">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer3">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer4">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer5">
+              <in>timer.cc</in>
+            </df>
+            <df name="timer6">
+              <in>timer.cc</in>
+            </df>
+          </df>
+        </df>
+        <df name="cdns">
+          <in>Resolver.cc</in>
+          <in>Resolver.h</in>
+          <in>dns.cc</in>
+        </df>
+        <df name="curl">
+          <in>Curl.cc</in>
+          <in>Curl.h</in>
+          <in>download.cc</in>
+          <in>mcurl.cc</in>
+        </df>
+        <df name="fastcgi">
+          <in>fastcgi.cc</in>
+          <in>fastcgi.h</in>
+          <in>fastcgi_test.cc</in>
+        </df>
+        <df name="filetransfer">
+          <df name="loadtest">
+          </df>
+          <in>download.cc</in>
+          <in>download2.cc</in>
+          <in>download3.cc</in>
+        </df>
+        <df name="hub">
+          <in>codec.cc</in>
+          <in>codec.h</in>
+          <in>hub.cc</in>
+          <in>pub.cc</in>
+          <in>pubsub.cc</in>
+          <in>pubsub.h</in>
+          <in>sub.cc</in>
+        </df>
+        <df name="idleconnection">
+          <in>echo.cc</in>
+          <in>echo.h</in>
+          <in>main.cc</in>
+          <in>sortedlist.cc</in>
+        </df>
+        <df name="maxconnection">
+          <in>echo.cc</in>
+          <in>echo.h</in>
+          <in>main.cc</in>
+        </df>
+        <df name="memcached">
+          <df name="client">
+            <in>bench.cc</in>
+          </df>
+          <df name="server">
+            <in>Item.cc</in>
+            <in>Item.h</in>
+            <in>MemcacheServer.cc</in>
+            <in>MemcacheServer.h</in>
+            <in>Session.cc</in>
+            <in>Session.h</in>
+            <in>footprint_test.cc</in>
+            <in>server.cc</in>
+          </df>
+        </df>
+        <df name="multiplexer">
+          <df name="harness">
+            <df name="src">
+              <df name="com">
+                <df name="chenshuo">
+                  <df name="muduo">
+                    <df name="example">
+                      <df name="multiplexer">
+                        <df name="testcase">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <in>demux.cc</in>
+          <in>multiplexer.cc</in>
+          <in>multiplexer_simple.cc</in>
+        </df>
+        <df name="netty">
+          <df name="discard">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="echo">
+            <in>client.cc</in>
+            <in>server.cc</in>
+            <in>server2.cc</in>
+          </df>
+          <df name="uptime">
+            <in>uptime.cc</in>
+          </df>
+        </df>
+        <df name="pingpong">
+          <in>bench.cc</in>
+          <in>client.cc</in>
+          <in>server.cc</in>
+        </df>
+        <df name="protobuf">
+          <df name="codec">
+            <in>client.cc</in>
+            <in>codec.cc</in>
+            <in>codec.h</in>
+            <in>codec_test.cc</in>
+            <in>dispatcher.h</in>
+            <in>dispatcher_lite.h</in>
+            <in>dispatcher_lite_test.cc</in>
+            <in>dispatcher_test.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="resolver">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="rpc">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+          <df name="rpcbalancer">
+            <in>balancer.cc</in>
+            <in>balancer_raw.cc</in>
+          </df>
+          <df name="rpcbench">
+            <in>client.cc</in>
+            <in>server.cc</in>
+          </df>
+        </df>
+        <df name="roundtrip">
+          <in>roundtrip.cc</in>
+          <in>roundtrip_udp.cc</in>
+        </df>
+        <df name="shorturl">
+          <in>shorturl.cc</in>
+        </df>
+        <df name="simple">
+          <df name="allinone">
+            <in>allinone.cc</in>
+          </df>
+          <df name="chargen">
+            <in>chargen.cc</in>
+            <in>chargen.h</in>
+            <in>main.cc</in>
+          </df>
+          <df name="chargenclient">
+            <in>chargenclient.cc</in>
+          </df>
+          <df name="daytime">
+            <in>daytime.cc</in>
+            <in>daytime.h</in>
+            <in>main.cc</in>
+          </df>
+          <df name="discard">
+            <in>discard.cc</in>
+            <in>discard.h</in>
+            <in>main.cc</in>
+          </df>
+          <df name="echo">
+            <in>echo.cc</in>
+            <in>echo.h</in>
+            <in>main.cc</in>
+          </df>
+          <df name="time">
+            <in>main.cc</in>
+            <in>time.cc</in>
+            <in>time.h</in>
+          </df>
+          <df name="timeclient">
+            <in>timeclient.cc</in>
+          </df>
+        </df>
+        <df name="socks4a">
+          <in>balancer.cc</in>
+          <in>socks4a.cc</in>
+          <in>tcprelay.cc</in>
+          <in>tunnel.h</in>
+        </df>
+        <df name="sudoku">
+          <in>client.cc</in>
+          <in>server_basic.cc</in>
+          <in>server_multiloop.cc</in>
+          <in>server_threadpool.cc</in>
+          <in>sudoku.cc</in>
+          <in>sudoku.h</in>
+        </df>
+        <df name="twisted">
+          <df name="finger">
+            <in>finger01.cc</in>
+            <in>finger02.cc</in>
+            <in>finger03.cc</in>
+            <in>finger04.cc</in>
+            <in>finger05.cc</in>
+            <in>finger06.cc</in>
+            <in>finger07.cc</in>
+          </df>
+        </df>
+        <df name="wordcount">
+          <in>hash.h</in>
+          <in>hasher.cc</in>
+          <in>receiver.cc</in>
+        </df>
+        <df name="zeromq">
+          <in>local_lat.cc</in>
+          <in>remote_lat.cc</in>
+        </df>
+      </df>
+      <df name="muduo">
+        <df name="base">
+          <df name="tests">
+            <in>AsyncLogging_test.cc</in>
+            <in>Atomic_unittest.cc</in>
+            <in>BlockingQueue_bench.cc</in>
+            <in>BlockingQueue_test.cc</in>
+            <in>BoundedBlockingQueue_test.cc</in>
+            <in>Date_unittest.cc</in>
+            <in>Exception_test.cc</in>
+            <in>FileUtil_test.cc</in>
+            <in>Fork_test.cc</in>
+            <in>GzipFile_test.cc</in>
+            <in>LogFile_test.cc</in>
+            <in>LogStream_bench.cc</in>
+            <in>LogStream_test.cc</in>
+            <in>Logging_test.cc</in>
+            <in>Mutex_test.cc</in>
+            <in>ProcessInfo_test.cc</in>
+            <in>SingletonThreadLocal_test.cc</in>
+            <in>Singleton_test.cc</in>
+            <in>ThreadLocalSingleton_test.cc</in>
+            <in>ThreadLocal_test.cc</in>
+            <in>ThreadPool_test.cc</in>
+            <in>Thread_bench.cc</in>
+            <in>Thread_test.cc</in>
+            <in>TimeZone_unittest.cc</in>
+            <in>Timestamp_unittest.cc</in>
+          </df>
+          <in>AsyncLogging.cc</in>
+          <in>AsyncLogging.h</in>
+          <in>Atomic.h</in>
+          <in>BlockingQueue.h</in>
+          <in>BoundedBlockingQueue.h</in>
+          <in>Condition.cc</in>
+          <in>Condition.h</in>
+          <in>CountDownLatch.cc</in>
+          <in>CountDownLatch.h</in>
+          <in>CurrentThread.h</in>
+          <in>Date.cc</in>
+          <in>Date.h</in>
+          <in>Exception.cc</in>
+          <in>Exception.h</in>
+          <in>FileUtil.cc</in>
+          <in>FileUtil.h</in>
+          <in>GzipFile.h</in>
+          <in>LogFile.cc</in>
+          <in>LogFile.h</in>
+          <in>LogStream.cc</in>
+          <in>LogStream.h</in>
+          <in>Logging.cc</in>
+          <in>Logging.h</in>
+          <in>Mutex.h</in>
+          <in>ProcessInfo.cc</in>
+          <in>ProcessInfo.h</in>
+          <in>Singleton.h</in>
+          <in>StringPiece.h</in>
+          <in>Thread.cc</in>
+          <in>Thread.h</in>
+          <in>ThreadLocal.h</in>
+          <in>ThreadLocalSingleton.h</in>
+          <in>ThreadPool.cc</in>
+          <in>ThreadPool.h</in>
+          <in>TimeZone.cc</in>
+          <in>TimeZone.h</in>
+          <in>Timestamp.cc</in>
+          <in>Timestamp.h</in>
+          <in>Types.h</in>
+          <in>WeakCallback.h</in>
+          <in>copyable.h</in>
+        </df>
+        <df name="net">
+          <df name="http">
+            <df name="tests">
+              <in>HttpRequest_unittest.cc</in>
+              <in>HttpServer_test.cc</in>
+            </df>
+            <in>HttpContext.h</in>
+            <in>HttpRequest.h</in>
+            <in>HttpResponse.cc</in>
+            <in>HttpResponse.h</in>
+            <in>HttpServer.cc</in>
+            <in>HttpServer.h</in>
+          </df>
+          <df name="inspect">
+            <df name="tests">
+              <in>Inspector_test.cc</in>
+            </df>
+            <in>Inspector.cc</in>
+            <in>Inspector.h</in>
+            <in>PerformanceInspector.cc</in>
+            <in>PerformanceInspector.h</in>
+            <in>ProcessInspector.cc</in>
+            <in>ProcessInspector.h</in>
+            <in>SystemInspector.cc</in>
+            <in>SystemInspector.h</in>
+          </df>
+          <df name="poller">
+            <in>DefaultPoller.cc</in>
+            <in>EPollPoller.cc</in>
+            <in>EPollPoller.h</in>
+            <in>PollPoller.cc</in>
+            <in>PollPoller.h</in>
+          </df>
+          <df name="protobuf">
+            <in>BufferStream.h</in>
+            <in>ProtobufCodecLite.cc</in>
+            <in>ProtobufCodecLite.h</in>
+          </df>
+          <df name="protorpc">
+            <in>RpcChannel.cc</in>
+            <in>RpcChannel.h</in>
+            <in>RpcCodec.cc</in>
+            <in>RpcCodec.h</in>
+            <in>RpcCodec_test.cc</in>
+            <in>RpcServer.cc</in>
+            <in>RpcServer.h</in>
+            <in>google-inl.h</in>
+          </df>
+          <df name="tests">
+            <in>Buffer_unittest.cc</in>
+            <in>EchoClient_unittest.cc</in>
+            <in>EchoServer_unittest.cc</in>
+            <in>EventLoopThreadPool_unittest.cc</in>
+            <in>EventLoopThread_unittest.cc</in>
+            <in>EventLoop_unittest.cc</in>
+            <in>InetAddress_unittest.cc</in>
+            <in>TcpClient_reg1.cc</in>
+            <in>TimerQueue_unittest.cc</in>
+            <in>ZlibStream_unittest.cc</in>
+          </df>
+          <in>Acceptor.cc</in>
+          <in>Acceptor.h</in>
+          <in>Buffer.cc</in>
+          <in>Buffer.h</in>
+          <in>Callbacks.h</in>
+          <in>Channel.cc</in>
+          <in>Channel.h</in>
+          <in>Connector.cc</in>
+          <in>Connector.h</in>
+          <in>Endian.h</in>
+          <in>EventLoop.cc</in>
+          <in>EventLoop.h</in>
+          <in>EventLoopThread.cc</in>
+          <in>EventLoopThread.h</in>
+          <in>EventLoopThreadPool.cc</in>
+          <in>EventLoopThreadPool.h</in>
+          <in>InetAddress.cc</in>
+          <in>InetAddress.h</in>
+          <in>Poller.cc</in>
+          <in>Poller.h</in>
+          <in>Socket.cc</in>
+          <in>Socket.h</in>
+          <in>SocketsOps.cc</in>
+          <in>SocketsOps.h</in>
+          <in>TcpClient.cc</in>
+          <in>TcpClient.h</in>
+          <in>TcpConnection.cc</in>
+          <in>TcpConnection.h</in>
+          <in>TcpServer.cc</in>
+          <in>TcpServer.h</in>
+          <in>Timer.cc</in>
+          <in>Timer.h</in>
+          <in>TimerId.h</in>
+          <in>TimerQueue.cc</in>
+          <in>TimerQueue.h</in>
+          <in>ZlibStream.h</in>
+          <in>boilerplate.cc</in>
+          <in>boilerplate.h</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>4</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+            <option name="gdb_source_dirs" value="muduo:examples"/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

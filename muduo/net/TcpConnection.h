@@ -79,6 +79,7 @@ class TcpConnection : boost::noncopyable,
   void setConnectionCallback(const ConnectionCallback& cb)
   { connectionCallback_ = cb; }
 
+  // Called by client or server
   void setMessageCallback(const MessageCallback& cb)
   { messageCallback_ = cb; }
 

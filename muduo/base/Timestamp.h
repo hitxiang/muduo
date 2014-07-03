@@ -87,7 +87,8 @@ inline double timeDifference(Timestamp high, Timestamp low)
 
 ///
 /// Add @c seconds to given timestamp.
-///
+/// @param timestamp is value, not pointer or reference because Timestamp contains only one int64_t data member
+///        it can use register to access the data.
 /// @return timestamp+seconds as Timestamp
 ///
 inline Timestamp addTime(Timestamp timestamp, double seconds)

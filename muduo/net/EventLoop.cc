@@ -60,6 +60,7 @@ EventLoop* EventLoop::getEventLoopOfCurrentThread()
   return t_loopInThisThread;
 }
 
+//Two file descriptors : EventLoop::timeQueue_::timerfd_ and EventLoop::wakeupFd_
 EventLoop::EventLoop()
   : looping_(false),
     quit_(false),
@@ -137,6 +138,10 @@ void EventLoop::quit()
   // There is a chance that loop() just executes while(!quit_) and exists,
   // then EventLoop destructs, then we are accessing an invalid object.
   // Can be fixed using mutex_ in both places.
+  /* 
+   * If the caller is not the current IO thread, call wakeup() to make IO thread to return back from poll(),
+   * continue [ while (!quit_) ] loop again, and !quit_ is false, so quit the loop.
+   * /
   if (!isInLoopThread())
   {
     wakeup();
@@ -158,8 +163,8 @@ void EventLoop::runInLoop(const Functor& cb)
 void EventLoop::queueInLoop(const Functor& cb)
 {
   {
-  MutexLockGuard lock(mutex_);
-  pendingFunctors_.push_back(cb);
+    MutexLockGuard lock(mutex_);
+    pendingFunctors_.push_back(cb);
   }
 
   if (!isInLoopThread() || callingPendingFunctors_)

@@ -53,7 +53,7 @@ TcpConnection::TcpConnection(EventLoop* loop,
     highWaterMark_(64*1024*1024)
 {
   channel_->setReadCallback(
-      boost::bind(&TcpConnection::handleRead, this, _1));
+      boost::bind(&TcpConnection::handleRead, this, _1));  // _1 : receiveTime
   channel_->setWriteCallback(
       boost::bind(&TcpConnection::handleWrite, this));
   channel_->setCloseCallback(
