@@ -4,14 +4,13 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>muduo</name>
-            <c-extensions/>
-            <cpp-extensions>cc</cpp-extensions>
+            <c-extensions>cc</c-extensions>
+            <cpp-extensions/>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
-                <sourceRootElem>examples</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

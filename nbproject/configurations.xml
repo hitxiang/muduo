@@ -293,6 +293,8 @@
             <in>EventLoop_unittest.cc</in>
             <in>InetAddress_unittest.cc</in>
             <in>TcpClient_reg1.cc</in>
+            <in>TcpTestClient.cc</in>
+            <in>TcpTestServer.cc</in>
             <in>TimerQueue_unittest.cc</in>
             <in>ZlibStream_unittest.cc</in>
           </df>
@@ -327,7 +329,6 @@
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
     <Elem>.</Elem>
-    <Elem>examples</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -908,6 +909,10 @@
             flavor2="4">
       </item>
       <item path="muduo/net/tests/TcpClient_reg1.cc" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="muduo/net/tests/TcpTestClient.cc" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="muduo/net/tests/TcpTestServer.cc" ex="false" tool="0" flavor2="0">
       </item>
       <item path="muduo/net/tests/TimerQueue_unittest.cc"
             ex="false"

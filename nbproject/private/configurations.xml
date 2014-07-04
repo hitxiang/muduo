@@ -377,6 +377,8 @@
             <in>EventLoop_unittest.cc</in>
             <in>InetAddress_unittest.cc</in>
             <in>TcpClient_reg1.cc</in>
+            <in>TcpTestClient.cc</in>
+            <in>TcpTestServer.cc</in>
             <in>TimerQueue_unittest.cc</in>
             <in>ZlibStream_unittest.cc</in>
           </df>
