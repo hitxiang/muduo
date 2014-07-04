@@ -140,7 +140,7 @@ void EventLoop::quit()
    * Can be fixed using mutex_ in both places.
    * If the caller is not the current IO thread, call wakeup() to make IO thread to return back from poll(),
    * continue [ while (!quit_) ] loop again, and !quit_ is false, so quit the loop.
-   * /
+   */
   if (!isInLoopThread())
   {
     wakeup();
