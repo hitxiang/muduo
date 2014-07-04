@@ -35,6 +35,12 @@ endif()
 add_executable(tcpclient_reg1 TcpClient_reg1.cc)
 target_link_libraries(tcpclient_reg1 muduo_net)
 
+add_executable(tcptest_client TcpTestClient.cc)
+target_link_libraries(tcptest_client muduo_net)
+
+add_executable(tcptest_server TcpTestServer.cc)
+target_link_libraries(tcptest_server muduo_net)
+
 add_executable(timerqueue_unittest TimerQueue_unittest.cc)
 target_link_libraries(timerqueue_unittest muduo_net)
 
