@@ -327,6 +327,7 @@
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>examples</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
