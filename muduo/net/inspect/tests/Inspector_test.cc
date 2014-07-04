@@ -7,8 +7,8 @@ using namespace muduo::net;
 
 int main()
 {
-  EventLoop loop;
-  EventLoopThread t;
+  EventLoop loop;  // service loop
+  EventLoopThread t; // monitor loop thread
   Inspector ins(t.startLoop(), InetAddress(12345), "test");
   loop.loop();
 }

@@ -171,6 +171,7 @@ void HttpServer::onConnection(const TcpConnectionPtr& conn)
 {
   if (conn->connected())
   {
+    // bind HttpContext to context_(boost::any) in TcpConnection
     conn->setContext(HttpContext());
   }
 }
@@ -190,7 +191,7 @@ void HttpServer::onMessage(const TcpConnectionPtr& conn,
   if (context->gotAll())
   {
     onRequest(conn, context->request());
-    context->reset();
+    context->reset(); // Adapt to deal with multiple request in one connection
   }
 }
 
@@ -204,6 +205,7 @@ void HttpServer::onRequest(const TcpConnectionPtr& conn, const HttpRequest& req)
   Buffer buf;
   response.appendToBuffer(&buf);
   conn->send(&buf);
+  // shutdown immediately if it is short connection
   if (response.closeConnection())
   {
     conn->shutdown();

@@ -41,6 +41,8 @@ class Inspector : boost::noncopyable
             const string& name);
   ~Inspector();
 
+  // add("proc", "pid", ProcessInspector::pid, "print pid")
+  // So use ProcessInspector::pid to deal with http://host:port/proc/pid
   void add(const string& module,
            const string& command,
            const Callback& cb,
