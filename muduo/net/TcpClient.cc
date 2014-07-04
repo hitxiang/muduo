@@ -151,7 +151,7 @@ void TcpClient::newConnection(int sockfd)
     MutexLockGuard lock(mutex_);
     connection_ = conn;
   }
-  conn->connectEstablished();
+  conn->connectEstablished(); // call connectionCallback_
 }
 
 void TcpClient::removeConnection(const TcpConnectionPtr& conn)

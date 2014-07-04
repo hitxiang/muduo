@@ -45,6 +45,8 @@ class EventLoopThreadPool : boost::noncopyable
   bool started_;
   int numThreads_;
   int next_;
+  
+  /* thread is managed by EventLoopThreadPool, while loop is managed by EventLoopThread */
   boost::ptr_vector<EventLoopThread> threads_;
   std::vector<EventLoop*> loops_;
 };

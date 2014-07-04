@@ -30,6 +30,7 @@ EventLoopThreadPool::~EventLoopThreadPool()
   // Don't delete loop, it's stack variable
 }
 
+//IO thread pool starts n IO threads, make IO thread in event loop.
 void EventLoopThreadPool::start(const ThreadInitCallback& cb)
 {
   assert(!started_);

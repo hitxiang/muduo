@@ -39,6 +39,7 @@ Connector::~Connector()
   assert(!channel_);
 }
 
+// Connector::start()-->Connector::startInLoop()-->Connector::connect()
 void Connector::start()
 {
   connect_ = true;
@@ -87,7 +88,7 @@ void Connector::connect()
     case 0:
     case EINPROGRESS:
     case EINTR:
-    case EISCONN:
+    case EISCONN:  // success
       connecting(sockfd);
       break;
 
@@ -157,12 +158,15 @@ void Connector::resetChannel()
   channel_.reset();
 }
 
+// Called after Connector::connect()
+// sockfd becomes writable after sockets::connect, write event can be notified after channel_->enableWriting()
 void Connector::handleWrite()
 {
   LOG_TRACE << "Connector::handleWrite " << state_;
 
   if (state_ == kConnecting)
   {
+    // Will not care the channel any more, will transfer the ownership of sockfd to Connection
     int sockfd = removeAndResetChannel();
     int err = sockets::getSocketError(sockfd);
     if (err)
@@ -181,7 +185,7 @@ void Connector::handleWrite()
       setState(kConnected);
       if (connect_)
       {
-        newConnectionCallback_(sockfd);
+        newConnectionCallback_(sockfd); // newConnectionCallback_ is set by TcpClient
       }
       else
       {

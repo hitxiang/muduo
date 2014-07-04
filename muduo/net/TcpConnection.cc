@@ -69,6 +69,7 @@ TcpConnection::~TcpConnection()
 {
   LOG_DEBUG << "TcpConnection::dtor[" <<  name_ << "] at " << this
             << " fd=" << channel_->fd();
+  // close socket by Socket RAII handler
 }
 
 void TcpConnection::send(const void* data, int len)
@@ -132,13 +133,14 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
     LOG_WARN << "disconnected, give up writing";
     return;
   }
-  // if no thing in output queue, try writing directly
+  // if no write event is noticed at channel and no thing in output queue, try writing directly
   if (!channel_->isWriting() && outputBuffer_.readableBytes() == 0)
   {
     nwrote = sockets::write(channel_->fd(), data, len);
     if (nwrote >= 0)
     {
       remaining = len - nwrote;
+      // when write has done
       if (remaining == 0 && writeCompleteCallback_)
       {
         loop_->queueInLoop(boost::bind(writeCompleteCallback_, shared_from_this()));
@@ -159,6 +161,8 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
   }
 
   assert(remaining <= len);
+  // If no error and write has not completed yet, it means the kernel sending buffer is full,
+  // So put the data into application outputBuffer.
   if (!faultError && remaining > 0)
   {
     size_t oldLen = outputBuffer_.readableBytes();
@@ -176,6 +180,10 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
   }
 }
 
+/* This function will not shutdown the connection, just change the state to kDisconnecting.
+ * The connection will be shutdown only if the data in output buffer is sent out and the state is kDisconnecting.
+ * Else the connection is shutdown by handleWrite()
+*/
 void TcpConnection::shutdown()
 {
   // FIXME: use compare and swap
@@ -193,6 +201,7 @@ void TcpConnection::shutdownInLoop()
   if (!channel_->isWriting())
   {
     // we are not writing
+    // ::shutdown(sockfd, SHUT_WR) send "TCP FIN"
     socket_->shutdownWrite();
   }
 }
@@ -291,7 +300,7 @@ void TcpConnection::handleRead(Timestamp receiveTime)
   {
     messageCallback_(shared_from_this(), &inputBuffer_, receiveTime);
   }
-  else if (n == 0)
+  else if (n == 0) // Receive TCP "ACK, FIN" after sending "FIN"
   {
     handleClose();
   }
@@ -303,6 +312,7 @@ void TcpConnection::handleRead(Timestamp receiveTime)
   }
 }
 
+// When there is any free space in kernel buffer, this function is called.
 void TcpConnection::handleWrite()
 {
   loop_->assertInLoopThread();
@@ -321,6 +331,8 @@ void TcpConnection::handleWrite()
         {
           loop_->queueInLoop(boost::bind(writeCompleteCallback_, shared_from_this()));
         }
+
+        // Application output buffer is empty and state of connection is kDisconnecting, shutdown the write only.
         if (state_ == kDisconnecting)
         {
           shutdownInLoop();
