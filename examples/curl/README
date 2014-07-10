@@ -4,3 +4,15 @@ It demostrates the simplest use case of curl with muduo.
 Note:
 1. DNS resolving could be blocking, if your curl is not built with c-ares.
 2. Request object should survive doneCallback.
+
+
+3, http://curl.haxx.se/libcurl/c/curl_multi_socket_action.html
+TYPICAL USAGE
+3.1, Create a multi handle
+3.2, Set the socket callback with CURLMOPT_SOCKETFUNCTION
+3.3, Set the timeout callback with CURLMOPT_TIMERFUNCTION, to get to know what timeout value to use when waiting for socket activities.
+3.4, Add easy handles with curl_multi_add_handle()
+3.5, Provide some means to manage the sockets libcurl is using, so you can check them for activity. This can be done through your application code, or by way of an external library such as libevent or glib.
+3.6, Call curl_multi_socket_action(..., CURL_SOCKET_TIMEOUT, 0, ...) to kickstart everything. To get one or more callbacks called.
+3.7, Wait for activity on any of libcurl's sockets, use the timeout value your callback has been told.
+3.8, When activity is detected, call curl_multi_socket_action() for the socket(s) that got action. If no activity is detected and the timeout expires, call curl_multi_socket_action with CURL_SOCKET_TIMEOUT.

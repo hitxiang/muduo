@@ -28,13 +28,19 @@ Request::Request(Curl* owner, const char* url)
   setopt(CURLOPT_USERAGENT, "curl");
   // set useragent
   LOG_DEBUG << curl_ << " " << url;
+  // add an easy handle to a multi session
   curl_multi_add_handle(owner_->getCurlm(), curl_);
 }
 
 Request::~Request()
 {
   assert(!channel_ || channel_->isNoneEvent());
+  // Removes a given easy_handle from the multi_handle.
   curl_multi_remove_handle(owner_->getCurlm(), curl_);
+
+  // This function must be the last function to call for an easy session.
+  // It is the opposite of the curl_easy_init function
+  //   and must be called with the same handle as input that the curl_easy_init call returned.
   curl_easy_cleanup(curl_);
 }
 
@@ -51,6 +57,7 @@ void Request::headerOnly()
   setopt(CURLOPT_NOBODY, 1);
 }
 
+// should be in the format "X-Y" or "X-Y,N-M", where either X or Y may be left out and X and Y are byte indexes.
 void Request::setRange(const StringArg range)
 {
   setopt(CURLOPT_RANGE, range.c_str());
@@ -140,6 +147,10 @@ void Curl::initialize(Option opt)
   curl_global_init(opt == kCURLnossl ? CURL_GLOBAL_NOTHING : CURL_GLOBAL_SSL);
 }
 
+
+// Function matching the curl_socket_callback prototype
+// @userp is set by CURLMOPT_SOCKETDATA
+// @socketp is set by curl_multi_assign
 int Curl::socketCallback(CURL* c, int fd, int what, void* userp, void* socketp)
 {
   Curl* curl = static_cast<Curl*>(userp);
@@ -147,6 +158,7 @@ int Curl::socketCallback(CURL* c, int fd, int what, void* userp, void* socketp)
   LOG_DEBUG << "Curl::socketCallback [" << curl << "] - fd = " << fd
             << " what = " << whatstr[what];
   Request* req = NULL;
+  // setted by setopt(CURLOPT_PRIVATE, this)
   curl_easy_getinfo(c, CURLINFO_PRIVATE, &req);
   assert(req->getCurl() == c);
   if (what == CURL_POLL_REMOVE)
@@ -166,6 +178,7 @@ int Curl::socketCallback(CURL* c, int fd, int what, void* userp, void* socketp)
       ch->setReadCallback(boost::bind(&Curl::onRead, curl, fd));
       ch->setWriteCallback(boost::bind(&Curl::onWrite, curl, fd));
       ch->enableReading();
+      // set data to association with an internal socket
       curl_multi_assign(curl->curlm_, fd, ch);
       LOG_TRACE << "new channel for fd=" << fd;
     }
@@ -183,6 +196,8 @@ int Curl::socketCallback(CURL* c, int fd, int what, void* userp, void* socketp)
   return 0;
 }
 
+// Function matching the curl_multi_timer_callback prototype
+// The userp argument is set by CURLMOPT_TIMERDATA
 int Curl::timerCallback(CURLM* curlm, long ms, void* userp)
 {
   Curl* curl = static_cast<Curl*>(userp);
@@ -191,6 +206,7 @@ int Curl::timerCallback(CURLM* curlm, long ms, void* userp)
   return 0;
 }
 
+// curl_multi_init() returns CURLM handle to be used as input to all the other multi-functions
 Curl::Curl(EventLoop* loop)
   : loop_(loop),
     curlm_(CHECK_NOTNULL(curl_multi_init())),
@@ -205,6 +221,7 @@ Curl::Curl(EventLoop* loop)
 
 Curl::~Curl()
 {
+  // Cleans up and removes a whole multi stack. It does not free or touch any individual [easy handles] in any way
   curl_multi_cleanup(curlm_);
 }
 
@@ -219,6 +236,9 @@ void Curl::onTimer()
   CURLMcode rc = CURLM_OK;
   do {
     LOG_TRACE;
+    // Get the timeout time by setting the CURLMOPT_TIMERFUNCTION option with curl_multi_setopt.
+    // Your application will then get called with information on how long to wait for socket actions at most before doing the timeout action:
+    //   call the curl_multi_socket_action function with the sockfd argument set to CURL_SOCKET_TIMEOUT.
     rc = curl_multi_socket_action(curlm_, CURL_SOCKET_TIMEOUT, 0, &runningHandles_);
     LOG_TRACE << rc << " " << runningHandles_;
   } while (rc == CURLM_CALL_MULTI_PERFORM);
@@ -230,6 +250,8 @@ void Curl::onRead(int fd)
   CURLMcode rc = CURLM_OK;
   do {
     LOG_TRACE << fd;
+    // The curl_multi_socket_action functions inform the application about updates in the socket (file descriptor) status
+    // by doing none, one, or multiple calls to the socket callback function set with the CURLMOPT_SOCKETFUNCTION option to curl_multi_setopt.
     rc = curl_multi_socket_action(curlm_, fd, CURL_POLL_IN, &runningHandles_);
     LOG_TRACE << fd << " " << rc << " " << runningHandles_;
   } while (rc == CURLM_CALL_MULTI_PERFORM);
